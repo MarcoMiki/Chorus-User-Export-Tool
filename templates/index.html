@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<!--
+	Eventually by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Chorus User Export Tool</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static',filename='/assets/css/main.css') }}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h1>Chorus User Export Tool</h1>
+				<p>A simple tool to extract a list of all the users from a Chorus site<br />
+				</p>
+			</header>
+
+		<!-- Signup Form -->
+			<form id="signup-form" method="post" action="/export">
+				<input type="text" name="apikey" placeholder="Your API key" >
+				<input type="text" name="url" placeholder="Your Site URL" />
+				<input type="submit" value="Export User List" />
+			</form>
+
+		<!-- Footer -->
+			<footer id="footer"><ul>
+					<li>Frontend theme is a modification of "Eventually", available on <a href="http://html5up.net">
+						HTML5 UP</a></li></ul>
+			</footer>
+
+
+
+	</body>
+</html>
