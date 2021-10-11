@@ -16,7 +16,6 @@ def export_users():
         chorus = Chorus(url=url, key=key)
         export = chorus.export_user_data()
         response = make_response(export)
-        # cd = 'attachment; filename=mycsv.csv'
         response.headers['Content-Disposition'] = 'attachment; filename=_chorus_user_export.csv'
         response.mimetype = 'text/csv'
         return response
