@@ -4,4 +4,4 @@ It requires a site API key and your site URL. Note that you need an active Choru
 
 Note that the file "Procfile" was added in order to deploy this webapp to Heroku, it may not be needed on other platforms.
 
-This app is currently deployed here: https://github.com/MarcoMiki/Chorus-User-Export-Tool
+This app is currently deployed here: https://chorus-user-export-tool.herokuapp.com/
