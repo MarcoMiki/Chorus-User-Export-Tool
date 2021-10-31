@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, make_response
 from Chorus import Chorus
+
 app = Flask(__name__)
 
 
@@ -19,10 +20,9 @@ def export_users():
         response.headers['Content-Disposition'] = 'attachment; filename=_chorus_user_export.csv'
         response.mimetype = 'text/csv'
         return response
-    except:
-        return render_template('index.html')
-
+    except Exception as e:
+        print("Error exporting user data: ", e)
+        return render_template('index.html', error=True)
 
 if __name__ == "__main__":
     app.run(debug=True)
-
