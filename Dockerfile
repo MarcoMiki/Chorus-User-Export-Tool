@@ -7,14 +7,17 @@ WORKDIR /app
 # Copy the dependencies file to the working directory
 COPY requirements.txt .
 
+# Create a virtual environment
+RUN python -m venv venv
+
+# Activate the virtual environment
+ENV PATH="/app/venv/bin:$PATH"
+
 # Install any dependencies
 RUN pip install -r requirements.txt
 
-# Copy the rest of the application code to the working directory
-COPY . .
-
 # Expose the port that your app runs on
-EXPOSE 8000
+EXPOSE 5000
 
 # Define the command to run your app
-CMD ["python", "main.py"]
+CMD ["python", "app.py"]
